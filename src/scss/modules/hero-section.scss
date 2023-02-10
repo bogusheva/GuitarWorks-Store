@@ -91,16 +91,13 @@
   display: block;
   position: absolute;
   bottom: 70px;
-  right: 0px;
-  @include tablet-view {
-    right: 50%;
-    bottom: 30px;
-  }
+  right: 50%;
   transform: translateX(-50%);
   z-index: 100;
   font-size: 16px;
-  @include desktop-view {
-    bottom: 15px;
+
+  @include tablet-view {
+    bottom: 30px;
   }
 
   .icon-next_arrow {
