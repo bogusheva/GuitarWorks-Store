@@ -1,0 +1,156 @@
+footer {
+  background-color: $color-brown-dark;
+  padding-bottom: 30px;
+  @include tablet-view {
+    padding-bottom: 20px;
+  }
+
+  .copyright-wrapper {
+    font-weight: $weight-light;
+    font-size: 12px;
+    color: $color-brown-light;
+    line-height: 15px;
+  }
+}
+
+.footer-container {
+  padding: 50px 10px;
+  @include tablet-view {
+    padding: 50px 24px 40px;
+  }
+  @include tablet-view {
+    padding: 70px 130px 50px;
+  }
+  display: grid;
+
+  grid-template-columns: repeat(3, 4fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "item-1 item-1 item-1"
+    "item-2 item-3 item-3"
+    "item-2 item-3 item-3";
+
+  @include tablet-view {
+    grid-template-areas:
+      "item-1 item-2 item-3"
+      "item-1 item-2 item-3"
+      "item-1 item-2 item-3";
+  }
+  @include desktop-view {
+    grid-template-areas:
+      "item-1 item-1 item-3"
+      "item-2 item-2 item-3"
+      "item-2 item-2 item-3";
+  }
+
+  .grid-item-1 {
+    grid-area: item-1;
+  }
+  .grid-item-2 {
+    grid-area: item-2;
+  }
+  .grid-item-3 {
+    grid-area: item-3;
+  }
+  .logo-wrapper {
+    padding-bottom: 40px;
+    text-align: center;
+    @include tablet-view {
+      text-align: left;
+    }
+    img {
+      width: 150px;
+    }
+  }
+  .pages-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .page-link {
+      font-weight: $weight-light;
+      color: $color-brown-light;
+      transition: all 0.3s ease-in-out;
+    }
+    .page-link:hover {
+      color: $color-tomato-light;
+    }
+  }
+
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $weight-light;
+
+    @include tablet-view {
+      align-items: flex-start;
+    }
+
+    h2 {
+      color: $color-brown-light;
+      font-weight: $weight-light;
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 25px;
+      @include tablet-view {
+        padding-bottom: 26px;
+      }
+      @include desktop-view {
+        padding-bottom: 48px;
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+
+    .socials-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 25px;
+      max-width: 180px;
+
+      @include tablet-view {
+        padding-bottom: 20px;
+      }
+      @include desktop-view {
+        padding-bottom: 32px;
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+    .telephone-contact {
+      color: $color-brown-light;
+    }
+    .icon-item_facebook,
+    .icon-item_instagram,
+    .icon-item_pinterest,
+    .icon-item_twitter,
+    .icon-youtube {
+      color: $color-brown-light;
+      font-size: 20px;
+      transition: all ease-in-out 0.3s;
+      &:hover {
+        color: $color-tomato-light;
+      }
+    }
+  }
+}
+.scroll-holder.reverse {
+  position: fixed;
+  transform: rotate(180deg);
+  bottom: 0;
+  right: 20px;
+  left: auto;
+  .icon-next_arrow {
+    color: $color-tomato-light;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $color-light-grey;
+    }
+  }
+}

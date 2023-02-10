@@ -1,0 +1,113 @@
+.registration-section {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: $color-white;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid $color-black;
+  @include tablet-view {
+    width: 70%;
+    bottom: -40px;
+    padding: 20px 30px;
+  }
+  @include desktop-view {
+    width: 50%;
+    bottom: -50px;
+    padding: 20px 50px;
+  }
+  max-width: 700px;
+  h2 {
+    padding-bottom: 20px;
+    @include tablet-view {
+      padding-bottom: 20px;
+    }
+    @include desktop-view {
+      padding-bottom: 30px;
+    }
+  }
+
+  .data-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-view {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include desktop-view {
+      gap: 50px;
+    }
+
+    .contacts-holder {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+      @include tablet-view {
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+      }
+      justify-content: center;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+
+    .registration-form {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      gap: 12px;
+      padding: 5px;
+      .registration-warning {
+        color: $color-tomato-light;
+        font-size: 14px;
+        height: 15px;
+        text-align: left;
+      }
+      .btn.btn-dark {
+        align-self: center;
+        @include tablet-view {
+          align-self: flex-end;
+        }
+      }
+
+      .input-name,
+      .input-email {
+        display: block;
+        border-bottom: 2px solid $color-brown-dark;
+        font-size: 18px;
+        width: 200px;
+        line-height: 1.2;
+
+        @include tablet-view {
+          font-size: 20px;
+        }
+
+        @include desktop-view {
+          width: 250px;
+        }
+
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid $color-tomato-light;
+
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

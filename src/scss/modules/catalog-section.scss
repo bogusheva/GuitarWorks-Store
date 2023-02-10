@@ -1,0 +1,430 @@
+.catalog-section {
+  .swiper {
+    padding-bottom: 41px;
+  }
+  .items-container {
+    padding: 0 0 25px;
+    @include tablet-view {
+      padding: 0 32px 25px;
+    }
+    @include desktop-view {
+      padding: 0 100px 25px;
+    }
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    width: 200px;
+  }
+}
+.catalog-section,
+.partners-section {
+  padding: 50px 10px;
+  @include desktop-view {
+    padding: 70px 40px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+
+  h2 {
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $weight-bold;
+    @include desktop-view {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  .items-container {
+    width: 100%;
+    position: relative;
+
+    .swiper {
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+      @include tablet-view {
+        display: block;
+      }
+    }
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+      @include tablet-view {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      display: block;
+      width: 12px;
+      height: 12px;
+      color: $color-dot-inactive;
+      opacity: 1;
+      background: $color-light-grey;
+      border: 1px solid $color-light-grey;
+
+      @include tablet-view {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet-active {
+      color: $color-light-grey;
+      background: $color-tomato-light;
+      border: 1px solid $color-tomato-light;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @include tablet-view {
+        width: 16px;
+        height: 30px;
+      }
+      @include desktop-view {
+        width: 40px;
+        height: 74px;
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+      content: "";
+    }
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: "";
+    }
+  }
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 10px;
+  @include tablet-view {
+    padding: 0 0 20px;
+  }
+  border: 1px solid $color-dark-dot-inactive;
+  &:hover {
+    border: 1px solid $color-tomato-light;
+  }
+
+  .item-status {
+    align-self: self-start;
+    text-transform: uppercase;
+    background-color: $color-tomato-light;
+    font-weight: $weight-light;
+    font-size: 10px;
+    line-height: 12px;
+    color: $color-brown-light;
+    padding: 4px 6px;
+    margin: 1px;
+  }
+
+  .item-status.sold {
+    background-color: $color-brown-light;
+    color: $color-black;
+  }
+  .item-name {
+    max-width: 240px;
+    height: 90px;
+    padding: 20px 10px 10px;
+    font-weight: $weight-regular;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    @include tablet-view {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    @include desktop-view {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .item-price {
+    display: block;
+    font-weight: $weight-bold;
+    font-size: 24px;
+    line-height: 30px;
+    @include tablet-view {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    @include desktop-view {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .item-image-wrapper {
+    width: 100%;
+    max-width: 204px;
+    @include tablet-view {
+      max-width: 600px;
+    }
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    @include tablet-view {
+      min-height: 400px;
+    }
+    @include desktop-view {
+      min-height: 500px;
+    }
+    img {
+      height: 150%;
+      object-fit: fill;
+    }
+  }
+}
+.icon-next_arrow,
+.icon-prev_arrow {
+  color: $color-black;
+  @include tablet-view {
+    font-size: 30px;
+  }
+  @include desktop-view {
+    font-size: 74px;
+  }
+}
+.icon-next_arrow:hover,
+.icon-prev_arrow:hover {
+  color: $color-tomato-light;
+}
+
+.products-catalog {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 12fr);
+  @include tablet-view {
+    grid-template-columns: repeat(3, 4fr);
+  }
+  @include desktop-view {
+    grid-template-columns: repeat(4, 3fr);
+  }
+
+  .item-card {
+    gap: 15px;
+  }
+
+  .item-card .item-image-wrapper {
+    max-width: max-content;
+  }
+  .item-card .item-name {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 90px;
+    text-transform: uppercase;
+  }
+  .btn.btn-dark {
+    display: block;
+    color: $color-arrow-inactive;
+    width: 180px;
+  }
+}
+
+.catalog-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 25px;
+  gap: 10px;
+
+  @include tablet-view {
+    padding: 0 32px 25px;
+  }
+  @include desktop-view {
+    padding: 0 100px 25px;
+  }
+
+  .first-sorting,
+  .second-sorting {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-view {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    @include desktop-view {
+      justify-content: space-between;
+    }
+  }
+
+  .btn {
+    max-width: 140px;
+    color: $color-black;
+    border: 1px solid $color-brown-dark;
+
+    @include desktop-view {
+      max-width: 180px;
+    }
+  }
+
+  .btn.btn-dark {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: $weight-light;
+    border: 1px solid $color-black;
+    background-color: $color-brown-light;
+
+    &:hover {
+      border: 1px solid $color-tomato-light;
+    }
+  }
+  .input-button {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 10px;
+    color: $color-black;
+
+    @include tablet-view {
+      font-size: 12px;
+      line-height: 16px;
+      padding: 13px 10px 13px 5px;
+    }
+
+    @include desktop-view {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 15px 10px;
+    }
+  }
+}
+
+.message-window {
+  position: absolute;
+  z-index: 1000;
+  background-color: $color-brown-light;
+  top: 100px;
+  right: 50%;
+  transform: translate(50%);
+  border: 2px solid $color-arrow-inactive;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 270px;
+  @include tablet-view {
+    width: 500px;
+  }
+
+  h2 {
+    padding-bottom: 20px;
+  }
+
+  .message-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+    .order-model {
+      font-size: 25px;
+    }
+
+    & h3:last-child {
+      padding-top: 20px;
+    }
+  }
+
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    input,
+    .order-info {
+      display: block;
+      border-bottom: 1px solid $color-brown-dark;
+      background-color: $color-brown-light;
+      font-size: 18px;
+      width: 200px;
+      line-height: 1.2;
+
+      @include tablet-view {
+        font-size: 20px;
+      }
+      @include desktop-view {
+        width: 250px;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color-tomato-light;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $color-brown-light;
+  border-bottom: 2px solid $color-brown-dark;
+  border-left: 2px solid $color-brown-dark;
+  padding: 5px 7px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $color-tomato-light;
+    color: $color-brown-light;
+    cursor: pointer;
+  }
+}

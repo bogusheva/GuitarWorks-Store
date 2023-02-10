@@ -1,0 +1,33 @@
+.btn {
+  font-weight: 500;
+  color: $color-brown-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 22px;
+  width: 154px;
+  padding: 10px 0;
+
+  @include desktop-view {
+    width: 227px;
+    padding: 15px 0;
+  }
+
+  &.btn-light {
+    border: 2px solid $color-brown-light;
+    transition: all 0.3s ease-in-out;
+  }
+  &.btn-dark {
+    border: 2px solid $color-black;
+    color: $color-black;
+    font-weight: $weight-bold;
+  }
+  &.btn-light:hover,
+  &.btn-dark:hover {
+    background-color: $color-tomato-light;
+    border: 2px solid $color-tomato-light;
+    color: $color-brown-light;
+  }
+}

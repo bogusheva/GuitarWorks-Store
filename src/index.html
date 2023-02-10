@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { 'title': 'Guitars', })
+  <body>
+    <div class="body-container">
+      @@include('html/header.html', {})
+      <main class="main-page">
+        <section class="hero-section">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="image-wrapper"
+                  style="background-image: url('@img/heroImage1.png')"
+                >
+                  <div class="text-wrapper">
+                    <h2>Find your own style</h2>
+                    <a href="#" class="btn btn-light">view more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="image-wrapper"
+                  style="background-image: url('@img/heroImage2.png')"
+                >
+                  <div class="text-wrapper">
+                    <h2>expand your horizons</h2>
+                    <a href="#" class="btn btn-light">view more</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="image-wrapper"
+                  style="background-image: url('@img/heroImage3.png')"
+                >
+                  <div class="text-wrapper">
+                    <h2>discover new options</h2>
+                    <a href="#" class="btn btn-light">view more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <a href="#anchor" class="scroll-holder"
+            ><span class="icon-next_arrow"></span
+          ></a>
+        </section>
+        <section class="catalog-section">
+          <h2 id="anchor">new arrivals</h2>
+          <div class="items-container">
+            <div class="swiper mySwiper2">
+              <div class="swiper-wrapper js-catalog-wrapper"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next">
+              <span class="icon-next_arrow"></span>
+            </div>
+            <div class="swiper-button-prev">
+              <span class="icon-prev_arrow"></span>
+            </div>
+          </div>
+          <a href="./catalog.html" class="btn btn-dark">view more</a>
+        </section>
+        <section class="news-section">
+          <h2 id="anchor-news">Latest news</h2>
+          <div class="articles-container js-news-container"></div>
+          <a href="./news.html" class="btn btn-dark js-news-button"
+            >view more</a
+          >
+        </section>
+        <section class="gallery-section">
+          <h2>Our inspiration gallery</h2>
+          <div class="photos-container js-gallery-container"></div>
+          <a
+            href="https://unsplash.com/s/photos/guitar"
+            class="btn btn-dark"
+            target="_blank"
+            >view more</a
+          >
+        </section>
+        <section class="partners-section">
+          <h2>our partners</h2>
+          <div class="items-container">
+            <div class="swiper mySwiper3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_9.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_8.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_7.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_6.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_5.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_4.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_3.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_2.svg" alt="partner logo" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="image-wrapper">
+                    <img src="@img/partners/item_1.svg" alt="partner logo" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-next">
+              <span class="icon-next_arrow"></span>
+            </div>
+            <div class="swiper-button-prev">
+              <span class="icon-prev_arrow"></span>
+            </div>
+          </div>
+        </section>
+        <section class="contacts-section">
+          <div class="map-responsive">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2511.407629937152!2d-114.0728743!3d50.9901391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170fd9e8d05c7%3A0x85210da10466d3c!2zNzExMCBNYWNsZW9kIFRyYWlsLCBDYWxnYXJ5LCBBQiBUMkggMEwzLCDQmtCw0L3QsNC00LA!5e0!3m2!1sru!2sua!4v1675892108911!5m2!1sru!2sua"
+              width="2400"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+        <section class="registration-section">
+          <h2 id="anchor-contacts">Get in touch</h2>
+          <div class="data-wrapper">
+            <ul class="contacts-holder">
+              <li>
+                <span class="icon-location2"></span
+                ><a href="https://goo.gl/maps/74SQnR7tjMTzDrwm8" target="_blank"
+                  >7110 Macleod Trail S</a
+                >
+              </li>
+              <li>
+                <span class="icon-phone"></span
+                ><a href="tel:+0014032168525">+001 403-216-8525</a>
+              </li>
+              <li>
+                <span class="icon-envelop"></span
+                ><a href="mailto:ted@guitarworks.ca">ted@guitarworks.ca</a>
+              </li>
+              <li><span class="icon-clock"></span>Mon-Sat: 10-6 & Sun: 12-5</li>
+            </ul>
+            <form action="#" class="registration-form">
+              <input type="text" placeholder="your name" class="input-name" />
+              <input type="text" placeholder="your email" class="input-email" />
+              <span class="registration-warning"></span>
+              <input type="submit" value="Submit" class="btn btn-dark" />
+            </form>
+          </div>
+        </section>
+      </main>
+      @@include('html/footer.html', {})
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

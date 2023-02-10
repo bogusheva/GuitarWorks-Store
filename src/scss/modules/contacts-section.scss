@@ -1,0 +1,25 @@
+.contacts-section {
+  width: 100%;
+  background-color: $color-white;
+  position: relative;
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 100%;
+    @include tablet-view {
+      padding-bottom: 60%;
+    }
+    @include desktop-view {
+      padding-bottom: 40%;
+    }
+    position: relative;
+    height: 0;
+  }
+
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}

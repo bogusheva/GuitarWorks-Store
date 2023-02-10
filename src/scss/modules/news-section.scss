@@ -1,0 +1,162 @@
+.news-section {
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-brown-light;
+  @include desktop-view {
+    padding: 70px 40px;
+  }
+  h2 {
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: $weight-bold;
+    @include desktop-view {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  .articles-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 0 40px;
+    @include tablet-view {
+      padding: 0 32px 60px;
+      flex-direction: row;
+    }
+    @include desktop-view {
+      padding: 0 100px 70px;
+      gap: 30px;
+    }
+
+    .article-card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      gap: 10px;
+      background-color: $color-white;
+      border: 1px solid $color-dark-dot-inactive;
+
+      &:hover {
+        border: 1px solid $color-tomato-light;
+        cursor: pointer;
+      }
+      .article-image-wrapper {
+        width: 100%;
+      }
+      .article-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+
+        .article-title {
+          text-transform: uppercase;
+          font-weight: $weight-regular;
+          font-size: 14px;
+          @include desktop-view {
+            font-size: 18px;
+          }
+          line-height: 18px;
+          height: 40px;
+        }
+        .article-date {
+          display: block;
+          color: $color-tomato-light;
+          font-weight: $weight-light;
+          font-size: 10px;
+          line-height: 12px;
+          @include desktop-view {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        .article-shorttext {
+          font-weight: $weight-light;
+          font-size: 12px;
+          line-height: 14px;
+          @include desktop-view {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.all-articles-container {
+  @include tablet-view {
+    padding: 0 10px;
+  }
+}
+.article-card.all {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  @include tablet-view {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .article-image-wrapper {
+    @include tablet-view {
+      width: 50%;
+    }
+  }
+  .article-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+
+    @include tablet-view {
+      width: 50%;
+    }
+
+    .article-title {
+      text-transform: uppercase;
+      font-weight: $weight-bold;
+      font-size: 18px;
+      line-height: 28px;
+      @include desktop-view {
+        font-size: 24px;
+        height: 52px;
+      }
+    }
+    .article-date {
+      display: block;
+      color: $color-tomato-light;
+      font-weight: $weight-light;
+      font-size: 12px;
+      line-height: 14px;
+      @include desktop-view {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    .article-shorttext {
+      font-weight: $weight-light;
+      font-size: 14px;
+      line-height: 20px;
+      @include desktop-view {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+.article-card.all:last-child {
+  padding-bottom: 0;
+}

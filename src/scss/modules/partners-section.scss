@@ -1,0 +1,32 @@
+.partners-section {
+  background-color: $color-brown-light;
+  padding-bottom: 20px;
+  @include tablet-view {
+    padding-bottom: 50px;
+  }
+
+  .items-container {
+    @include tablet-view {
+      padding: 0 32px;
+    }
+    @include tablet-view {
+      padding: 0 100px;
+    }
+  }
+  .swiper {
+    padding-bottom: 20px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    width: 100%;
+    @include tablet-view {
+      width: 380px;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 10px;
+  }
+}

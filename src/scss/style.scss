@@ -1,0 +1,17 @@
+@import "fonts";
+
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/general";
+
+@import "./modules/header";
+@import "./modules/hero-section";
+@import "./modules/catalog-section";
+@import "./modules/news-section";
+@import "./modules/gallery-section";
+@import "./modules/partners-section";
+@import "./modules/contacts-section";
+@import "./modules/registration-section";
+@import "./modules/footer";
+@import "./modules/buttons.scss";
