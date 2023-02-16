@@ -3,48 +3,7 @@
   @@include('html/head.html', { 'title': 'Catalog', })
   <body>
     <div class="body-container">
-      <header class="header">
-        <div class="header-container js-header-menu">
-          <div class="logo-wrapper">
-            <a href="#" class="logo-link">
-              <img src="@img/logo.svg" alt="logo" />
-            </a>
-          </div>
-          <div class="nav-wrapper">
-            <nav class="nav js-nav">
-              <ul class="nav-list">
-                <li class="nav-item">
-                  <a href="./index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link active">Catalog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./news.html" class="nav-link">News</a>
-                </li>
-                <li class="nav-item">
-                  <a href="./index.html#anchor-contacts" class="nav-link"
-                    >Contact us</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="burger-wrapper">
-            <button class="burger-btn js-burger-btn">
-              <span></span>
-            </button>
-          </div>
-          <div class="icons-wrapper">
-            <div class="search-wrapper">
-              <img src="@img/search-icon.svg" alt="search" />
-            </div>
-            <div class="profile-wrapper">
-              <img src="@img/profile-icon.svg" alt="search" />
-            </div>
-          </div>
-        </div>
-      </header>
+      @@include('html/header.html', {'page': 'catalog'})
       <main>
         <section class="catalog-section">
           <h2>Our treasures</h2>

@@ -132,13 +132,6 @@
         padding: 28px 15px;
       }
     }
-
-    @include tablet-view {
-      .nav-link.active {
-        background-color: $color-tomato-light;
-        color: $color-white;
-      }
-    }
   }
 
   .burger-wrapper {
@@ -183,5 +176,24 @@
     &:after {
       bottom: 0;
     }
+  }
+}
+
+[data-current-page="home"] {
+  .nav-item:nth-child(1) {
+    background-color: $color-tomato-light;
+    color: $color-white;
+  }
+}
+[data-current-page="catalog"] {
+  .nav-item:nth-child(2) {
+    background-color: $color-tomato-light;
+    color: $color-white;
+  }
+}
+[data-current-page="news"] {
+  .nav-item:nth-child(3) {
+    background-color: $color-tomato-light;
+    color: $color-white;
   }
 }
