@@ -33,7 +33,7 @@ We have received our first shipment with many more on route.  Browse our selecti
     src: "../img/news/article_7.webp",
     date: "May 24, 2022",
     title: "TAYLOR DAYS ARE BACK",
-    text: `Ultra popular Taylor promotion Taylor Days is back from May 24-July 11, 2022.  Purchase any 200 DLX series or higher Taylor guitar and you have the opportunity to add a Taylor BT1 or Taylor GS Mini Mahogany for only $139/$279 CAD respectively.  Shop our Taylor selection in catalog and if you don't see what you're after, guitars we have on backorder are also eligible so <a href="tel:0800 300 4040">contact us</a> to place your order.`,
+    text: `Ultra popular Taylor promotion Taylor Days is back from May 24-July 11, 2022.  Purchase any 200 DLX series or higher Taylor guitar and you have the opportunity to add a Taylor BT1 or Taylor GS Mini Mahogany for only $139/$279 CAD respectively.  Shop our Taylor selection in catalog and if you don't see what you're after, guitars we have on backorder are also eligible so contact us to place your order.`,
   },
   {
     id: 5,

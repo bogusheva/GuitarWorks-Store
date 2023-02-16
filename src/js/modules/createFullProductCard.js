@@ -1,6 +1,4 @@
-import createMessageWindow from "./createMessageWindow.js";
-
-export default function createProductCard(item, fullCard = false) {
+export default function createFullProductCard(item) {
   const itemStatus = document.createElement("span");
   itemStatus.innerText = item.status;
   itemStatus.classList.add("item-status");
@@ -19,7 +17,6 @@ export default function createProductCard(item, fullCard = false) {
     maximumFractionDigits: 2,
   });
   itemPrice.classList.add("item-price");
-
   const itemButton = document.createElement("button");
   itemButton.classList.add("btn");
   itemButton.classList.add("btn-dark");
@@ -40,17 +37,7 @@ export default function createProductCard(item, fullCard = false) {
 
   const itemCard = document.createElement("div");
   itemCard.classList.add("item-card");
-  if (fullCard) {
-    itemCard.append(
-      itemStatus,
-      itemImgWrapper,
-      itemName,
-      itemPrice,
-      itemButton
-    );
-  } else {
-    itemCard.append(itemStatus, itemImgWrapper, itemName, itemPrice);
-  }
+  itemCard.append(itemStatus, itemImgWrapper, itemName, itemPrice, itemButton);
 
   const swiperSlide = document.createElement("div");
   swiperSlide.classList.add("swiper-slide");
