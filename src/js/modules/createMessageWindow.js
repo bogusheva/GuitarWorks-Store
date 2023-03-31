@@ -55,8 +55,10 @@ export default function createMessageWindow(text, model, price) {
       messageFormPhone.value
     ) {
       warning.innerText = "Please, pick up the phone! We are calling!";
-      messageFormName.value = "";
-      messageFormPhone.value = "";
+      messageFormName.style.display = "none";
+      messageFormPhone.style.display = "none";
+      submitButton.style.display = "none";
+      messageText.style.display = "none";
     } else {
       warning.innerText = "Something wrong with data. Try again";
     }
