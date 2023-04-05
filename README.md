@@ -1,6 +1,6 @@
 # Guitarworks
 
-It's my Capstone Project after studying JavaScript block at Frontend Development Course at Beetroot Academy. My first store site is made with Vanilla JavaScript using a responsive design. It has few pages: home, catalog and news. Catalog let sort products in different ways, make buy/notify order. This web application uses Unsplash Image API and Swiper slider to display images.
+It's my Capstone Project after studying JavaScript block in Frontend Development Course at Beetroot Academy. My first store site is made with Vanilla JavaScript using a responsive design. It has a few pages: home, catalogue and news. The catalogue lets sort products in different ways, and make buy/notify orders. This web application uses Unsplash Image API and Swiper slider to display images.
 
 [GuitarWorks site](https://guitarworks.netlify.app/)
 
